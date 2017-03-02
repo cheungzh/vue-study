@@ -1,6 +1,6 @@
 <template>
     <div class="list-head">
-        <img :src="src" alt="">
+        <img :src="src" alt="" class="list-img">
         <p>{{label}}</p>
         <slot></slot>
     </div>
@@ -11,7 +11,7 @@
         width: 25%;
         float: left;
     }
-    img{
+    .list-img{
         width: 50px;
         height: 50px;
     }

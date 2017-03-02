@@ -18,7 +18,9 @@
             </div>
         </div>
         <div class="viewBody">
-            <router-view></router-view>
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
         </div>
     </div>
 </template>
@@ -35,12 +37,13 @@
 </script>
 
 <style lang="scss">
-    *{
+    * {
         margin: 0;
         padding: 0;
         color: #2e2e2e;
     }
-    .clearFix:after{
+
+    .clearFix:after {
         display: block;
         content: '';
         clear: both;
@@ -52,12 +55,14 @@
         -moz-osx-font-smoothing: grayscale;
         /*text-align: center;*/
         /*color: #2c3e50;*/
-        margin-top: 60px;
+        margin-top: 20px;
     }
-    .clearFix{
+
+    .clearFix {
         content: '';
         clear: both;
     }
+
     h1, h2 {
         font-weight: normal;
     }

@@ -1,6 +1,8 @@
 <template>
     <div>
-        <div class="clearFix">
+        <location></location>
+        <advertise></advertise>
+        <div class="life clearFix">
             <list label="超市" src="/src/img/56bbf69bNeb305b26.png" class=""></list>
             <list label="生鲜" src="/src/img/56bbf6aeN9e8d8ca7.jpg"></list>
             <list label="外卖美食" src="/src/img/56bbf6c0N9756ffa0.png"></list>
@@ -18,10 +20,14 @@
 
 <script>
     import List from './list/list.vue'
+    import Advertise from './advertise/advertise.vue'
+    import Location from './location/location.vue'
     export default({
         name:'Home',
         components:{
-            'list':List
+            'list':List,
+            'advertise':Advertise,
+            'location':Location
         }
     })
 </script>
