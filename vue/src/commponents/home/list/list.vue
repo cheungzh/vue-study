@@ -1,8 +1,8 @@
 <template>
     <div class="list-head">
+        <slot></slot>
         <img :src="src" alt="" class="list-img">
         <p>{{label}}</p>
-        <slot></slot>
     </div>
 </template>
 <style>

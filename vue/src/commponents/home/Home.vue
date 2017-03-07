@@ -14,6 +14,13 @@
             <list label="洗衣" src="/src/img/56bbf6faN839e4a3b.png"></list>
             <list label="按摩美业" src="/src/img/56bbf707N254c354a.png"></list>
         </div>
+        <div>
+            <img src="/src/img/57067e11N70a1d6fd.jpg" alt="" class="homeImg">
+        </div>
+        <div class="clearFix">
+            <offer title="新客福利" text="offer-text" head="offer-head" discounted="5折起" desc="offer-title" dis="offer-disc" img="offer-img" src="/src/img/57069272N56be2185.png"></offer>
+            <offer title="新客福利" head="offer-head" discounted="5折起" desc="offer-title" dis="offer-disc" img="offer-img" src="/src/img/57069272N56be2185.png"></offer>
+        </div>
 
     </div>
 </template>
@@ -22,12 +29,14 @@
     import List from './list/list.vue'
     import Advertise from './advertise/advertise.vue'
     import Location from './location/location.vue'
+    import Offer from './offer/offer.vue'
     export default({
         name:'Home',
         components:{
             'list':List,
             'advertise':Advertise,
-            'location':Location
+            'location':Location,
+            'offer':Offer
         }
     })
 </script>
@@ -35,5 +44,22 @@
 <style>
     .life{
         margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .homeImg{
+        width: 100%;
+    }
+    .offer-head{
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    .offer-text{
+        float: left;
+        margin-left: 10px;
+    }
+    .offer-img{
+        width: 60px;
+        height: 60px;
     }
 </style>
