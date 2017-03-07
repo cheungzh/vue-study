@@ -3,7 +3,7 @@
         <img v-for="(items,key) in arr" :src="items.src" alt="" :key="key" class="adver-img" v-if="index==key+1" >
         <div class="clearFix">
             <ul>
-                <li class="point"  v-for="i in 6" :key="i" v-on:click="changeBanner(i)" :class="[index==i?activePoint:'']"></li>
+                <li class="point"  v-for="i in 6" :key="i" @click="changeBanner(i)" :class="[index==i?activePoint:'']"></li>
             </ul>
         </div>
         <slot></slot>
@@ -32,22 +32,29 @@
             const _this=this;
              _this.timer=setInterval(function(){
                 _this.index+=1;
-                if(_this.index>6){
+                 if(_this.index>6){
                     _this.index=1;
                 }
             },3000)
         },
         destroyed:function(){
         },
-        deactivated:function(){
-            const _this=this;
-            clearInterval(_this.timer);
-
-        },
+//        activated:function(){
+////            const _this=this;
+////            _this.timer=setInterval(function(){
+////                _this.index+=1;
+////                if(_this.index>6){
+////                    _this.index=1;
+////                }
+////            },3000)
+//        },
+//        deactivated:function(){
+////            const _this=this
+//            clearInterval(this.timer);
+//        },
         methods:{
             changeBanner:function(index){
                 this.index=index;
-///               this.$emit("changeBanner");
             }
         }
 

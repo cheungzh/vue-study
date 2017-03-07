@@ -57,7 +57,9 @@
         /*color: #2c3e50;*/
         margin-top: 20px;
     }
-
+    input:focus{
+        outline: none;
+    }
     .clearFix {
         content: '';
         clear: both;
