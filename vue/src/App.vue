@@ -2,19 +2,29 @@
     <div id="app">
         <div class="viewFoot clearFix">
             <div class="foot">
-                <router-link to="/home">首页</router-link>
+                <router-link to="/home">
+                    <span class="pic1">首页</span>
+                </router-link>
             </div>
             <div class="foot">
-                <router-link to="/sort">分类</router-link>
+                <router-link to="/sort">
+                    <span class="pic2">分类</span>
+                </router-link>
             </div>
             <div class="foot">
-                <router-link to="/shopCart">购物车</router-link>
+                <router-link to="/shopCart">
+                    <span class="pic3">购物车</span>
+                </router-link>
             </div>
             <div class="foot">
-                <router-link to="/order">订单</router-link>
+                <router-link to="/order">
+                    <span class="pic4">订单</span>
+                </router-link>
             </div>
             <div class="foot">
-                <router-link to="/aboutUs">关于我们</router-link>
+                <router-link to="/aboutUs">
+                    <span class="pic5">我的</span>
+                </router-link>
             </div>
         </div>
         <div class="viewBody">
@@ -57,9 +67,11 @@
         /*color: #2c3e50;*/
         margin-top: 20px;
     }
-    input:focus{
+
+    input:focus {
         outline: none;
     }
+
     .clearFix {
         content: '';
         clear: both;
@@ -85,19 +97,60 @@
         text-decoration: none;
     }
 
-    .router-link-active {
-        color: red;
+    .router-link-active span {
+        color: #47b34f;
     }
 
     .viewFoot {
         width: 100%;
         position: fixed;
-        bottom: 10px;
+        bottom: 0;
+        background-color: #fff;
+        height: 60px;
+        line-height: 60px;
     }
 
     .foot {
         width: 20%;
         float: left;
         text-align: center;
+    }
+
+    .pic1,.pic2,.pic3,.pic4,.pic5 {
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        display: block;
+        font-size: 16px;
+        padding-top: 5px;
+        background: url("./img/nav2.png") no-repeat center -276px;
+        background-size: 24px;
+    }
+    span.pic2{
+        background-position:center -333px;
+    }
+    span.pic3{
+        background-position:center -387px;
+    }
+    span.pic4{
+        background-position:center -441px;
+    }
+    span.pic5{
+        background-position:center -495px;
+    }
+    .router-link-active .pic1{
+        background-position: center -5px;
+    }
+    .router-link-active .pic2{
+        background-position: center -60px;
+    }
+    .router-link-active .pic3{
+        background-position: center -114px;
+    }
+    .router-link-active .pic4{
+        background-position: center -168px;
+    }
+    .router-link-active .pic5{
+        background-position: center -222px;
     }
 </style>
