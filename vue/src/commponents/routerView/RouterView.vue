@@ -1,6 +1,5 @@
 <template>
     <div>
-        <a href="">Sort</a>
         <router-view></router-view>
     </div>
 </template>

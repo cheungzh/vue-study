@@ -3,27 +3,27 @@
         <div class="viewFoot clearFix">
             <div class="foot">
                 <router-link to="/home">
-                    <span class="pic1">首页</span>
+                    <span class="nav pic1">首页</span>
                 </router-link>
             </div>
             <div class="foot">
                 <router-link to="/sort">
-                    <span class="pic2">分类</span>
+                    <span class="nav pic2">分类</span>
                 </router-link>
             </div>
             <div class="foot">
                 <router-link to="/shopCart">
-                    <span class="pic3">购物车</span>
+                    <span class="nav pic3">购物车</span>
                 </router-link>
             </div>
             <div class="foot">
                 <router-link to="/order">
-                    <span class="pic4">订单</span>
+                    <span class="nav pic4">订单</span>
                 </router-link>
             </div>
             <div class="foot">
                 <router-link to="/aboutUs">
-                    <span class="pic5">我的</span>
+                    <span class="nav pic5">我的</span>
                 </router-link>
             </div>
         </div>
@@ -65,7 +65,7 @@
         -moz-osx-font-smoothing: grayscale;
         /*text-align: center;*/
         /*color: #2c3e50;*/
-        margin-top: 20px;
+        /*margin-top: 20px;*/
     }
 
     input:focus {
@@ -97,7 +97,7 @@
         text-decoration: none;
     }
 
-    .router-link-active span {
+    .router-link-active .nav {
         color: #47b34f;
     }
 

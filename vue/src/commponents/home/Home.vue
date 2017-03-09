@@ -1,8 +1,9 @@
 <template>
     <div>
-        <router-view></router-view>
-        <div v-if="home==true">
-            <location></location>
+        <div>
+            <header class="home-location">
+                <location></location>
+            </header>
             <advertise></advertise>
             <div class="life clearFix">
                 <!--<list v-for="item in lifeType" :label="item.text" :src="item.src" class=""></list>-->
@@ -31,7 +32,7 @@
             <div class="clearFix dico">
                 <offer v-for="item in discount" :key="item.id" :path="item.path" :title="item.text"
                        :discounted="item.discounted" :src="item.src" text="dico-text" head="dico-head" desc="dico-title"
-                       disc="dico-disc" img="offer-img" v-on:click.native="viewPo(item.path)"></offer>
+                       disc="dico-disc" img="offer-img"></offer>
             </div>
         </div>
     </div>
@@ -93,6 +94,9 @@
 </script>
 
 <style>
+    .home-location{
+        margin-top: 20px;
+    }
     .life {
         margin-top: 20px;
         margin-bottom: 20px;

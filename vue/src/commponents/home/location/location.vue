@@ -160,10 +160,16 @@
         background-color: #9a9a9a;
     }
 
-    .main-head .location-ul li:nth-child(3n+1) {
-        margin-left: 22px;
+    @media only screen and (min-width: 380px){
+        .main-head .location-ul li:nth-child(3n+1) {
+            margin-left: 22px;
+        }
     }
-
+    @media only screen and (max-width: 380px) {
+        .main-head .location-ul li:nth-child(2n+1) {
+            margin-left: 22px;
+        }
+    }
     .main-head .location-ul li:last-child {
         margin-bottom: 10px;
     }
