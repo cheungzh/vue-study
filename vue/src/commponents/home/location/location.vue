@@ -31,6 +31,7 @@
                 changeCity:false,
                 location: {id:0,name:'全部'},
                 city:'杭州',
+                value:'',
                 country:[{id:1,name:'全部'}, {id:11,name:'江干'},{id:12,name:'西湖'},{id:13,name:'上城'},{id:14,name:'下城'},{id:15,name:'滨江'}],
                 province: [],
                 defaultProvince:[]
