@@ -22,7 +22,7 @@
         height: 30px;
         line-height: 30px;
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         background-color: #0097ff;
         padding: 10px;
     }

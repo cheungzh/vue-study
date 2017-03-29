@@ -47,7 +47,7 @@
         width: 100%;
         height: 80px;
         line-height: 80px;
-        margin: 20px;
+        /*margin: 20px;*/
     }
 
     .login i {
