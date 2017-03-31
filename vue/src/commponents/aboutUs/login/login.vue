@@ -4,10 +4,11 @@
             <span class="loginType" @click="changeLogin">{{loginType}}</span>
         </head-back>
         <div class="loginIn" v-if="loginType=='密码登陆'">
-            <input type="text" placeholder="手机号">
+            <input type="text" placeholder="手机号" v-model="mobileNum">
             <div class="line"></div>
             <input type="text" placeholder="验证码">
-            <div class="code">获取验证码</div>
+            <div class="code activeCode" @click="codeSend" v-if="mobile">获取验证码</div>
+            <div class="code" v-if="!mobile">获取验证码</div>
         </div>
         <div class="loginIn" v-else>
             <input type="text" placeholder="手机/邮箱/用户名">
@@ -27,11 +28,19 @@
         data(){
             return {
                 loginType:'密码登陆',
-                title:'登陆'
+                title:'登陆',
+                mobileNum:""
             }
         },
         components:{
             "head-back":HeadBack
+        },
+        computed:{
+          mobile:function(){
+              const _this=this;
+              const reg=/^(13|14|15|18)[0-9]{9}$/;
+              return reg.test(_this.mobileNum);
+          }
         },
         methods:{
             changeLogin:function(){
@@ -43,6 +52,12 @@
                     this.loginType='密码登陆';
                 }
 
+            },
+            codeSend:function(){
+                let code='';
+                for(let i=0;i<4;i++){
+                    code+=Math.floor(Math.random()*10);
+                };
             }
         }
     })
@@ -87,6 +102,9 @@
         top: 7px;
         right: 10px;
         border-radius: 5px;
+    }
+    .loginIn .activeCode{
+        background-color: #3190e8;
     }
     .confirmLogin{
         width: 90%;
